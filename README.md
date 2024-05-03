@@ -35,7 +35,9 @@ The main objective of this part is to implement a controller that controls the r
 
 ### LIDAR operation
 
-![alt text](Demos/LIDAR.mp4)
+https://github.com/matsano/Human-Following-with-Robot-Husky/assets/81397690/066d35f6-c70a-48f6-be7a-709d013386d8
+
+
 
 
 
