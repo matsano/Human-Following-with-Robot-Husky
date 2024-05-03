@@ -1,0 +1,7 @@
+scan_name: "/cluster_center"
+scan_queue_size: 2
+command_velocity_name: "/cmd_vel"
+command_velocity_queue_size: 10
+kd: 0.2
+kw: 0.4
+target_distance: 2

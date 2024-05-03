@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+ 
+<launch>
+   
+   <node name="husky_controller" pkg="husky_controller" type="husky_controller_node" output="screen" >
+      <rosparam command="load" file="$(find husky_controller)/config/params.yaml"/>
+   </node>
+   
+</launch>
+
