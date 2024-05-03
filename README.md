@@ -23,15 +23,18 @@ The main objective of this part is to implement a controller that controls the r
 
 ### Final result
 
-![alt text](Demos/Final_result.mp4)
+https://github.com/matsano/Human-Following-with-Robot-Husky/assets/81397690/a68c3e54-baad-4fb8-a2a9-4974752bf29e
+
 
 ### Intermediary result
 
-![alt text](Demos/Intermediary_result.mp4)
+https://github.com/matsano/Human-Following-with-Robot-Husky/assets/81397690/169ac1ac-045f-4869-918a-9fc151961016
+
 
 ### Human identification and following ([pipeline](https://github.com/matsano/Human-Following-with-Robot-Husky/tree/main/pc_pipeline-main))
 
-![alt text](Demos/Human_identification_following.mp4)
+https://github.com/matsano/Human-Following-with-Robot-Husky/assets/81397690/2d56a0b9-9a01-46f0-8e46-13af39c1a2a0
+
 
 ### LIDAR operation
 
