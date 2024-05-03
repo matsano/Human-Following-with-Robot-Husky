@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+ 
+<launch>
+    
+   <node name="pc_pipeline" pkg="pc_pipeline" type="pc_pipeline_node" output="screen" >
+      <rosparam command="load" file="$(find pc_pipeline)/config/pipeline_params.yaml"/>
+   </node>
+
+   <node pkg="rviz"   type="rviz" name="rviz_sim"                   args="-d $(find pc_pipeline)/rviz/lidar.rviz"             />
+
+   <node pkg="rosbag" type="play" name="player" output="screen" args="-l /home/arthur/dataset2/data2.bag --clock -q --topics /rslidar_points /odom"/>
+   
+   <node pkg="tf" type="static_transform_publisher" name="velodyne_rslidar"  args="0 0 0 0 0 0 velodyne rslidar 100"/> 
+   <node pkg="tf" type="static_transform_publisher" name="rslidar_velodyne"  args="0 0 0 0 0 0 rslidar velodyne 100"/> 
+   <node pkg="tf" type="static_transform_publisher" name="base_link_rslidar" args="0 0 0.65 0 0 0 base_link rslidar 100"/> 
+   
+   <!-- FLOBOT 3D Object Detector -->
+  <node pkg="object3d_detector" type="object3d_detector" name="object3d_detector" output="screen" respawn="false">
+    <param name="model_file_name" type="string" value="$(find object3d_detector)/libsvm/pedestrian.model"/>
+    <param name="range_file_name" type="string" value="$(find object3d_detector)/libsvm/pedestrian.range"/>
+  </node>
+      
+</launch>
+
